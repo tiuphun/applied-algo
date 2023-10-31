@@ -2,8 +2,10 @@
 using namespace std;
 
 const int MAXN = 20;
-int n, m;
-int x[MAXN];
+int n;				// number of kids
+int m;				// number of candies
+int x[MAXN];		// x[i] = nb of candies for kid i
+int cur_sum = 0;	// current sum of candies
 
 void print_sol() {
 	for (int i = 1; i <= n; i++) {
@@ -30,8 +32,10 @@ void TRY(int k) {
 
 int main () {
 	cur_sum = 0;
-	cin << n;
-	cin << m;
+	printf("n = ");
+	cin >> n;
+	printf("m = ");
+	cin >> m;
 	TRY (1);
 	return 0;
 }

@@ -2,7 +2,7 @@
 using namespace std;
 char s[100];
 int n;
-void print_sol() {
+void print_sol(char* s, int n) {
     for (int i = 0; i < n; i++) {
         cout << s[i];
     }
@@ -29,6 +29,7 @@ void TRY() {
 
 int main(int argc, char const *argv[])
 {
+    printf("n = ");
     cin >> n;
     TRY();
     return 0;
