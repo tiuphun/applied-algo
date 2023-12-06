@@ -1,12 +1,10 @@
 #include <iostream>
-#include <cstring>
 using namespace std;
 
 int A[1001];                    // input array
-int n;                          // number of elements
-int res;                        // result   
 int iMem[1001];                 // memory array
 bool bMark[1001];               // mark array
+memset(bmark, 0, sizeof(bMark));
 
 int MaxSum (int i) {
     if (i == 1)     return A[i];
@@ -27,12 +25,13 @@ void Trace(int i) {
 
 // Tracing by loop
 void TraceLoop() {
-    int tmp = 0, pos = -1;
+    int ans = 0, pos = -1;
     for (int i = 0; i < n; i++) {
-        tmp = max(res, iMem[i]);
-        if (tmp == iMem[i]) pos = i;        // after this loop pos is the position of the maximum sum
+        ans = max(res, iMem[i]);
+        if (ans == iMem[i]) pos = i;
     }
-    int first = pos, last = pos, sum = A[first];
+    cout << ans << endl;
+    int first = pos, las = pos, sum = A[first];
     while (sum != res)
     {
         --first;
@@ -43,16 +42,10 @@ void TraceLoop() {
 
 int main(int argc, char const *argv[])
 {
-    cin >> n;
-    for (int i = 0; i < n; i++)
-        cin >> A[i];
-    memset(bMark, 0, sizeof(bMark));
-    MaxSum(n);
-    int tmp = 0;
-    for (int i = 0; i < n; i++)
-        res = max(tmp, iMem[i]);
-    cout << res;
-    Trace(n);
-    TraceLoop();
+    int ans = 0;
+    for (int i = 0; i < n; i++) {
+        ans = max(ans, iMem[i]);
+    }
+    cout << ans;
     return 0;
 }
