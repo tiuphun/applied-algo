@@ -1,9 +1,9 @@
 # Applied Algorithms
 🙉 Practice problems, source codes, lecture notes - for Applied Algorithms course. Semester 2023.1
 
-'template' folder contains the some code templates as well as some useful cheatsheets from Explore cards of [Leetcode](leetcode.com).
+`template` folder contains the some code templates as well as some useful cheatsheets from Explore cards of [Leetcode](https://leetcode.com/explore/).
 
-'practice' folder contains the practice problems from past exam papers.
+`practice` folder contains the practice problems from past exam papers.
 
 The remaining folders are titled after their respective lectures. They contains the source codes for related problems.
 
