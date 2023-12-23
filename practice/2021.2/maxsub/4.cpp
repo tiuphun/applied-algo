@@ -1,4 +1,4 @@
-/* Ex 4. Max Subsequence, no 3 adjacent elements selected
+/* Ex 4. Max Sub Sequence, no 3 adjacent elements selected
 Given a[1], a[2], ... a[n]
 subset, max sum, does not contains 3 adj elements 
 
@@ -8,6 +8,11 @@ Input:
 
 Output:
 [1] sum of subseq
+
+7 
+4 10 6 6 6 2 5
+
+31
 */
 
 #include <iostream>

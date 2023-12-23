@@ -3,6 +3,12 @@ a[1], a[2],..., a[n]
 Queries:
 * insert x: adding an element x to collection
 * delete-max: delete from collection and return the value of max element
+
+10
+8 5 7 9 10 4 7 2 2 6
+insert 3
+delete-max
+insert 6
 */
 #include <iostream>
 #include <queue>

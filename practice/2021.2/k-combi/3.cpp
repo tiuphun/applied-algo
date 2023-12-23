@@ -2,6 +2,11 @@
 a[1], a[2], ..., a[n]
 k, m
 Find Q, nb of choosing k elements s.t. their sum = m
+
+5 3 10
+1 2 3 4 5
+
+2
 */
 #include <iostream>
 using namespace std;
