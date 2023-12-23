@@ -1,3 +1,4 @@
+// Done
 #include <iostream>
 using namespace std;
 
@@ -32,10 +33,7 @@ void TRY(int k) {
 
 int main () {
 	cur_sum = 0;
-	printf("n = ");
-	cin >> n;
-	printf("m = ");
-	cin >> m;
+	cin >> n >> m;
 	TRY (1);
 	return 0;
 }

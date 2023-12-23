@@ -18,7 +18,6 @@ void input() {
         }
     }
 }
-
 void find_cmin () {
     for (int i = 1; i <= n; i++) {
         for (int j = i+1; j <= n; i++) {
@@ -26,7 +25,6 @@ void find_cmin () {
         }
     }
 }
-
 void TRY(int k) {
     for (int v = 1; v <= n; v++) {
         x[k] = v;
@@ -46,21 +44,16 @@ void TRY(int k) {
         visited[v] = 0;
     }
 }
-
 int main(int argc, char const *argv[])
 {
     input();
     find_cmin();
-    for (int i = 1; i <= n; i++)
-    {
-        visited[i] = 0;
-    }
+    for (int i = 1; i <= n; i++) visited[i] = 0;
     f = 0;
     fopt = 0;
     x[1] = 1;
     visited[1] = 1;
     TRY(2);
-    
     return 0;
 }
 

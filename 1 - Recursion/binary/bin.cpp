@@ -1,3 +1,4 @@
+// Done
 #include <iostream>
 using namespace std;
 char s[100];
@@ -29,7 +30,6 @@ void TRY() {
 
 int main(int argc, char const *argv[])
 {
-    printf("n = ");
     cin >> n;
     TRY();
     return 0;
