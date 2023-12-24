@@ -21,34 +21,21 @@ using namespace std;
 int n;              // nb of elements
 int a[N];           // the sequence
 int s[N];           // solution of subprob
-int ans = 0;
 
-int MaxSub(int i) {
-    if (i == 1) return a[0];
-    if (i == 2) return max(a[0], a[1]);
-    if (i == 3) return max(max(a[0], a[1]), a[2]);
-
-    for (int k = 2; k <= i; k++) 
-        ans = max(a[i], a[i] + MaxSub(i-k));
-    return ans;
-    // for (int k = 4; k < n; k++) {
-    //     int j = 1; 
-    //     while (j <= i-3) {
-    //         s[k] = max(MaxSub(j), MaxSub(j-1));
-    //         j++;
-    //     }
-    // }
-
-    // for (int i = 0; i < n; i++) {
-    //     if (ans < s[i]) ans = s[i];
-    // }
-    // return ans;
+int MaxSub() {
+    if (n <= 2) return max(a[0], a[1]);
+    if (n == 3) return max(max(a[0], a[1]), a[2]);
+    s[0] = a[0]; 
+    s[1] = a[0] + a[1]; 
+    s[2] = max(max(a[0] + a[1], a[1] + a[2]), a[0] + a[2]);
+    for (int i = 3; i < n; i++) 
+        s[i] = max(max(s[i-1], s[i-2] + a[i]), s[i-3] + a[i-1] + a[i]);
+    return s[n-1];
 }
 int main(int argc, char const *argv[])
 {
     cin >> n;
     for (int i = 0; i < n; i++) cin >> a[i];
-
-    cout << MaxSub(n);
+    cout << MaxSub();
     return 0;
 }
