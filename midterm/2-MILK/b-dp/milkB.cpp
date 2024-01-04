@@ -11,6 +11,7 @@ int main(int argc, char const *argv[])
     cin >> year;
 
     int sum = accumulate(a.begin(), a.end(), 0);
+    // dp[i][j] means whether the sum j can be achieved using the first i elements
     vector<vector<bool> > dp(n+1, vector<bool>(sum+1, false));
     for (int i = 0; i <= n; i++) dp[i][0] = true;
 
